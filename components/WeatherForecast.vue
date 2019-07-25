@@ -5,6 +5,10 @@
         <span class="font-medium">{{ dayNames[day.day] }}</span>
         <br />
         <span class="text-3xl">{{ weatherEmojis[day.icon] }}</span>
+        <br />
+        <span>{{ day.score >= 0 ? day.score : '' }}</span>
+        <br />
+        <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
       </div>
     </div>
   </div>
@@ -39,11 +43,15 @@ export default {
   data() {
     return {
       dayNames: dayNames,
-      weatherEmojis: weatherEmojis
+      weatherEmojis: weatherEmojis,
     }
   },
   computed: {
-    ...mapState('localStorage', ['forecast', 'forecast3Days'])
+    ...mapState('localStorage', ['forecast', 'forecast3Days']),
+    highestScoreDay() {
+      const scores = this.forecast3Days.map(d => d.score >= 0 ? d.score : 0)
+      return scores.indexOf(Math.max(...scores))
+    }
   },
   mounted() {
     this.$store.dispatch('localStorage/getForecast')
@@ -57,6 +65,12 @@ export default {
 }
 
 .card {
-  @apply w-1/3 max-w-md mx-1 p-2 rounded overflow-hidden shadow bg-gray-100 text-indigo-800;
+  @apply relative w-1/3 max-w-md mx-1 p-2 rounded shadow bg-gray-100 text-indigo-800;
+}
+
+.bestday {
+  @apply absolute text-4xl;
+  top: -15px;
+  right: -5px;
 }
 </style>
