@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .container {
-  @apply w-5/6 max-w-xl p-5  mx-auto text-center;
+  @apply max-w-xl p-5  mx-auto text-center;
 }
 
 .title {

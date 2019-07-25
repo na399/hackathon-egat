@@ -21,9 +21,14 @@ export const actions = {
 
       let forecast3Days = forecast.daily.data.slice(0, 3)
 
-      const dayNames = ['Today', 'Tomorrow', 'Day after Tomorrow']
       for (let i = 0; i < forecast3Days.length; i++) {
-        forecast3Days[i]['day'] = dayNames[i]
+        if (i == 0) {
+          forecast3Days[i]['day'] = 'today'
+        } else {
+          const date = new Date((forecast3Days[i]['time'] + (7 * 60 * 60)) * 1000)
+          const day = date.getDay(date)
+          forecast3Days[i]['day'] = day
+        }
       }
 
       commit('updateForecast', forecast)
