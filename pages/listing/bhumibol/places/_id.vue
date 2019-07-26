@@ -8,6 +8,10 @@
       :outdoorScoreRequired="item.outdoorScoreRequired"
       :popularity="item.popularity"
     />
+    <div class="my-10">
+      <p>{{ item.description }}</p>
+    </div>
+    <div class="btn btn-blue">Book Now</div>
   </div>
 </template>
 
@@ -40,5 +44,15 @@ export default {
 <style scoped>
 .container {
   @apply max-w-xl p-5 mx-auto;
+}
+
+.btn {
+  @apply w-1/3 my-3 mx-auto font-bold py-2 px-2 rounded-full text-center;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
 }
 </style>

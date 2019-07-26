@@ -5,7 +5,7 @@
       "id": "bhu-1",
       "name": "Extreme Outdoor Water Adventure",
       "excerpt": "prohibited when raining",
-      "description": "We are at Dam, water is everywhere.",
+      "description": "We are at Dam, water is everywhere. Lorem ipsum dolor sit amet, harum zril invenire sit ea, rebum diceret ullamcorper qui ei. Est augue doctus ut, per cu dico sadipscing. Cu duo diam vide instructior. Te nec odio fierent, per graeci mentitum ex. Elitr officiis comprehensam sit ex.",
       "outdoorScoreRequired": 8,
       "popularity": 7
     },
@@ -13,7 +13,7 @@
       "id": "bhu-2",
       "name": "Golf",
       "excerpt": "⛳️",
-      "description": "🏌️‍",
+      "description": "🏌️‍Lorem ipsum dolor sit amet, harum zril invenire sit ea, rebum diceret ullamcorper qui ei. Est augue doctus ut, per cu dico sadipscing. Cu duo diam vide instructior. Te nec odio fierent, per graeci mentitum ex. Elitr officiis comprehensam sit ex.",
       "outdoorScoreRequired": 6,
       "popularity": 4
     },
@@ -21,7 +21,7 @@
       "id": "bhu-3",
       "name": "Open yet Roofed Local Art & Craft Market",
       "excerpt": "🎨",
-      "description": "👨‍🎨",
+      "description": "👨‍🎨 Lorem ipsum dolor sit amet, harum zril invenire sit ea, rebum diceret ullamcorper qui ei. Est augue doctus ut, per cu dico sadipscing. Cu duo diam vide instructior. Te nec odio fierent, per graeci mentitum ex. Elitr officiis comprehensam sit ex.",
       "outdoorScoreRequired": 1,
       "popularity": 6
     },
@@ -29,7 +29,7 @@
       "id": "bhu-4",
       "name": "Secluded Indoor Museum",
       "excerpt": "🖼",
-      "description": "🏛",
+      "description": "🏛 Lorem ipsum dolor sit amet, harum zril invenire sit ea, rebum diceret ullamcorper qui ei. Est augue doctus ut, per cu dico sadipscing. Cu duo diam vide instructior. Te nec odio fierent, per graeci mentitum ex. Elitr officiis comprehensam sit ex.",
       "outdoorScoreRequired": 0,
       "popularity": 3
     }
