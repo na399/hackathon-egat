@@ -49,12 +49,15 @@ export const actions = {
         hourRainIntensity[d] = []
       })
 
+      let count = 0
+
       for (let i = 0; i < forecast72H.length; i++) {
         const hourData = convertTime(forecast72H[i]['time'])
         const hour = hourData.getHours()
         const date = hourData.getDate()
 
         if (dates.includes(date) && 8 <= hour && hour <= 18) {
+          count += 1
           hourRains[date].push(forecast72H[i]['precipProbability'])
           hourRainIntensity[date].push(forecast72H[i]['precipIntensity'])
         }
@@ -62,15 +65,15 @@ export const actions = {
 
       for (let [key, val] of Object.entries(hourRains)) {
         const rainyHours = val.filter(h => h > 0.2).length
-        const score = (1 - rainyHours / 11) * 6
+        const score = (1 - rainyHours / count) * 5
 
         const i = dates.indexOf(+key)
         forecast3Days[i]['score'] = score
       }
 
       for (let [key, val] of Object.entries(hourRainIntensity)) {
-        const heavyRainyHours = val.filter(h => h > 1).length
-        const score = (1 - heavyRainyHours / 11) * 4
+        const heavyRainyHours = val.filter(h => h > 0.5).length
+        const score = (1 - heavyRainyHours / count) * 5
 
         const i = dates.indexOf(+key)
         forecast3Days[i]['score'] += score
