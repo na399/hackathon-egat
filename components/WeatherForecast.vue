@@ -26,7 +26,9 @@
           <br />
           <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
           <nuxt-link :to="`/listing/bhumibol/${Math.round(day.score)}`" v-if="day.score >= 0">
-            <div class="btn btn-blue">👀</div>
+            <div class="btn btn-blue text-sm">
+              What to do?
+            </div>
           </nuxt-link>
         </div>
       </div>
@@ -128,7 +130,7 @@ export default {
 }
 
 .btn {
-  @apply w-1/2 my-3 mx-auto font-bold py-2 px-2 rounded-full;
+  @apply w-2/3 my-3 mx-auto font-bold py-2 px-2 rounded-full;
 }
 .btn-blue {
   @apply bg-blue-500 text-white;

@@ -23,7 +23,7 @@
       <div class="bg-gray-200 h-3 w-full rounded-full my-1">
         <div class="bg-red-600 h-3 rounded-full" :style="{'width': `${popularity / 10 * 100}%`}"></div>
       </div>
-      <nuxt-link class="btn btn-blue" v-if="id" :to="`/listing/bhumibol/places/${id}`">👀</nuxt-link>
+      <nuxt-link class="btn btn-blue" v-if="id" :to="`/listing/bhumibol/places/${id}`">More details</nuxt-link>
     </div>
   </div>
 </template>
@@ -61,7 +61,7 @@ export default {
 
 <style scoped>
 .btn {
-  @apply w-1/4 my-3 mx-auto font-bold py-2 px-2 rounded-full text-center;
+  @apply w-1/3 my-3 mx-auto font-bold py-2 px-2 rounded-full text-center;
 }
 .btn-blue {
   @apply bg-blue-500 text-white;
