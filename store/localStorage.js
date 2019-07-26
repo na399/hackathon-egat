@@ -42,9 +42,11 @@ export const actions = {
       let forecast72H = forecast.hourly.data.slice(0, 72)
 
       let hourRains = {}
+      let hourRainIntensity = {}
 
       dates.forEach(d => {
         hourRains[d] = []
+        hourRainIntensity[d] = []
       })
 
       for (let i = 0; i < forecast72H.length; i++) {
@@ -54,16 +56,24 @@ export const actions = {
 
         if (dates.includes(date) && 8 <= hour && hour <= 18) {
           hourRains[date].push(forecast72H[i]['precipProbability'])
+          hourRainIntensity[date].push(forecast72H[i]['precipIntensity'])
         }
       }
 
       for (let [key, val] of Object.entries(hourRains)) {
-        const count = val.length
-        const rainyHours = val.filter(h => h > 0.35).length
-        const score = (1 - rainyHours / count) * 10
+        const rainyHours = val.filter(h => h > 0.2).length
+        const score = (1 - rainyHours / 11) * 6
 
         const i = dates.indexOf(+key)
         forecast3Days[i]['score'] = score
+      }
+
+      for (let [key, val] of Object.entries(hourRainIntensity)) {
+        const heavyRainyHours = val.filter(h => h > 1).length
+        const score = (1 - heavyRainyHours / 11) * 4
+
+        const i = dates.indexOf(+key)
+        forecast3Days[i]['score'] += score
       }
 
       commit('updateForecast', forecast)

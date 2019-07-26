@@ -24,8 +24,8 @@
           <br />
           <span class="text-3xl">{{ scoreEmojis[Math.round(day.score)] }}</span>
           <br />
-          <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
-          <nuxt-link :to="`/listing/bhumibol/${Math.round(day.score)}`" v-if="day.score >= 0">
+          <span class="bestday" v-show="day.index == highestScoreDay">✨</span>
+          <nuxt-link :to="`/listing/bhumibol/${Math.round(day.score)}`" v-show="day.score >= 0">
             <div class="btn btn-blue text-sm">
               What to do?
             </div>
