@@ -1,6 +1,6 @@
 # Hackathon-EGAT
 
-> Startup Hackathon 2019 hosted by EGAT
+> [Startup Hackathon 2019 hosted by Electricity Generating Authority of Thailand (EGAT)](https://startuphackathon.wi.th)
 
 ## WATT ⚡️
 
