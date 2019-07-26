@@ -3,7 +3,9 @@
     <div class="currentWeather" v-if="forecast.currently">
       <span class="text-lg font-medium">Current weather</span>
       <br />
-      <span class="text-blue-700 text-3xl">{{ Math.round(forecast.currently.apparentTemperature) }}°C {{ weatherEmojis[forecast.currently['icon']] }}</span>
+      <span
+        class="text-blue-700 text-3xl"
+      >{{ Math.round(forecast.currently.apparentTemperature) }}°C {{ weatherEmojis[forecast.currently['icon']] }}</span>
       <br />
       <span class="text-blue-700 text-xl">{{ forecast.currently.summary }}</span>
     </div>
@@ -13,18 +15,23 @@
         <br />
         <span class="text-3xl">{{ weatherEmojis[day.icon] }}</span>
         <br />
+        <span class="text-sm text-gray-700">{{ day.summary }}</span>
+        <br />
         <br />
         <span class="text-sm text-gray-500">Outdoor rating</span>
         <br />
         <span class="text-3xl">{{ scoreEmojis[day.score] }}</span>
         <br />
         <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
-        <nuxt-link to="/listing" v-if="day.score >= 0">
+        <nuxt-link :to="`/listing/bhumibol/${day.score}`" v-if="day.score >= 0">
           <div class="btn btn-blue">👀</div>
         </nuxt-link>
       </div>
     </div>
     <div class="text-gray-500">
+      <nuxt-link to="/listing/bhumibol/10">
+        <div class="btn btn-blue">👀 View All Attractions</div>
+      </nuxt-link>
       <span>Live weather forecast by</span>
       <br />
       <a

@@ -1,0 +1,37 @@
+{
+  "lang": "en",
+  "listing": [
+    {
+      "id": "bhu-1",
+      "name": "Extreme Outdoor Water Adventure",
+      "excerpt": "prohibited when raining",
+      "description": "We are at Dam, water is everywhere.",
+      "outdoorScoreRequired": 8,
+      "popularity": 7
+    },
+    {
+      "id": "bhu-2",
+      "name": "Golf",
+      "excerpt": "⛳️",
+      "description": "🏌️‍",
+      "outdoorScoreRequired": 6,
+      "popularity": 4
+    },
+    {
+      "id": "bhu-3",
+      "name": "Open yet Roofed Local Art & Craft Market",
+      "excerpt": "🎨",
+      "description": "👨‍🎨",
+      "outdoorScoreRequired": 1,
+      "popularity": 6
+    },
+    {
+      "id": "bhu-4",
+      "name": "Secluded Indoor Museum",
+      "excerpt": "🖼",
+      "description": "🏛",
+      "outdoorScoreRequired": 0,
+      "popularity": 3
+    }
+  ]
+}

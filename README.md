@@ -2,9 +2,14 @@
 
 > Startup Hackathon 2019 hosted by EGAT
 
+## WATT ⚡️
+
+**Weather-Assisted Travel Tailor**
+Weather 🌦 x Travel 🧳 x EGAT ⚡️
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 

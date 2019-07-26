@@ -5,8 +5,8 @@
       id="grid-state"
     >
       <option>Bhumibol Dam</option>
-      <option>Sirikit Dam</option>
-      <option>Vajiralongkorn Dam</option>
+      <option>Sirikit Dam (under development)</option>
+      <option>Vajiralongkorn Dam (under development)</option>
     </select>
     <div
       class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"

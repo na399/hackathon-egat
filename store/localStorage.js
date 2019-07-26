@@ -59,7 +59,7 @@ export const actions = {
 
       for (let [key, val] of Object.entries(hourRains)) {
         const count = val.length
-        const rainyHours = val.filter(h => h > 0.2).length
+        const rainyHours = val.filter(h => h > 0.3).length
         const score = Math.round((1 - rainyHours / count) * 10)
 
         const i = dates.indexOf(+key)
