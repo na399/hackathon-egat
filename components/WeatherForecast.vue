@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="currentWeather" v-if="forecast.currently">
+    <div class="currentWeather" v-show="forecast.currently">
       <span class="text-lg font-medium">Current weather</span>
       <br />
       <span
