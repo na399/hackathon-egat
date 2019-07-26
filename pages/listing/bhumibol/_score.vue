@@ -4,6 +4,7 @@
     <div v-for="item in listing" :key="item.id">
       <ListingCard
         :id="item.id"
+        :img="item.img"
         :name="item.name"
         :excerpt="item.excerpt"
         :pic="item.pic"
@@ -16,6 +17,7 @@
     <div v-for="item in listingExcluded" :key="item.id" class="opacity-50">
       <ListingCard
         :id="item.id"
+        :img="item.img"
         :name="item.name"
         :excerpt="item.excerpt"
         :pic="item.pic"

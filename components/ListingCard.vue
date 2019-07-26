@@ -2,7 +2,7 @@
   <div class="max-w-sm w-full lg:max-w-full lg:flex my-5 mx-auto">
     <div
       class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-gray-200"
-      style="background-image: url('/img/card-left.jpg')"
+      :style="{'background-image': `url(${img})`}"
       :title="name"
     ></div>
     <div
@@ -43,9 +43,9 @@ export default {
       type: String,
       default: '(excerpt)'
     },
-    pic: {
+    img: {
       type: String,
-      default: '(pic)'
+      default: ''
     },
     outdoorScoreRequired: {
       type: Number,
