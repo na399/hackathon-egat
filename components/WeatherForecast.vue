@@ -11,21 +11,24 @@
     </div>
     <div class="dailyForecast">
       <div v-for="day in forecast3Days" :key="day.time" class="card">
-        <span class="font-medium">{{ dayNames[day.day] }}</span>
-        <br />
-        <span class="text-3xl">{{ weatherEmojis[day.icon] }}</span>
-        <br />
-        <span class="text-sm text-gray-700">{{ day.summary }}</span>
-        <br />
-        <br />
-        <span class="text-sm text-gray-500">Outdoor rating</span>
-        <br />
-        <span class="text-3xl">{{ scoreEmojis[day.score] }}</span>
-        <br />
-        <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
-        <nuxt-link :to="`/listing/bhumibol/${day.score}`" v-if="day.score >= 0">
-          <div class="btn btn-blue">👀</div>
-        </nuxt-link>
+        <div class="flex-grow-0">
+          <span class="font-medium">{{ dayNames[day.day] }}</span>
+          <br />
+          <span class="text-3xl">{{ weatherEmojis[day.icon] }}</span>
+          <br />
+          <span class="text-sm text-gray-700">{{ day.summary }}</span>
+        </div>
+        <div class="flex-grow h-6"></div>
+        <div class="flex-grow-0">
+          <span class="text-sm text-gray-500">Outdoor rating</span>
+          <br />
+          <span class="text-3xl">{{ scoreEmojis[Math.round(day.score)] }}</span>
+          <br />
+          <span class="bestday" v-if="day.index == highestScoreDay">✨</span>
+          <nuxt-link :to="`/listing/bhumibol/${Math.round(day.score)}`" v-if="day.score >= 0">
+            <div class="btn btn-blue">👀</div>
+          </nuxt-link>
+        </div>
       </div>
     </div>
     <div class="text-gray-500">
@@ -115,7 +118,7 @@ export default {
 }
 
 .card {
-  @apply relative w-1/3 max-w-md mx-1 p-2 rounded shadow bg-gray-100 text-indigo-800;
+  @apply relative w-1/3 max-w-md mx-1 p-2 rounded shadow bg-gray-100 text-indigo-800 flex flex-col;
 }
 
 .bestday {
